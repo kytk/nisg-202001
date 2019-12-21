@@ -36,7 +36,7 @@ FreeSurfer, FSL, git などのソフトウェアを自前でセットアップ�
 
 チュートリアルでは、VirtualBox 6.1 上で Lin4Neuro を動作させます。最新版の Lin4Neuro は、VirtualBox 6.1で最適化されているため、前のバージョンのVirtualBoxを使用の方は必ず6.1にアップグレードしてください。
 
-- [VirtualBoxのサイト][1] から、ご自身のOSにあったVirtualBoxのインストーラーをダウンロードします。
+- [VirtualBoxのサイト][1]{:target="_blank"} から、ご自身のOSにあったVirtualBoxのインストーラーをダウンロードします。
 
 - ダウンロードしたインストーラーを用いてVirtualBox 6.1 をインストールします。
 
@@ -48,7 +48,7 @@ FreeSurfer, FSL, git などのソフトウェアを自前でセットアップ�
 
 Lin4Neuroの仮想アプライアンスを以下からダウンロードします。20GBありますので、十分に容量があるところにダウンロードしてください。
 
-- [L4N-1804-abis-20191218.ovaのダウンロード][2]
+- [L4N-1804-abis-20191218.ovaのダウンロード][2]{:target="_blank"}
 
 ## Lin4Neuro仮想アプライアンスのインポート
 
