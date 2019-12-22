@@ -31,8 +31,9 @@
 
 FreeSurfer, FSL, git などのソフトウェアを自前でセットアップ可能なら、自前のMacまたはLinuxで参加いただけます。その場合、事前サポートは限られることをご了承ください。セットアップに自信がない場合は、VirtualBox + Lin4Neuro で参加することをお勧めします。
 
+## VirtualBox上で動作するLin4Neuroで参加する場合
 
-## VirtualBox 6.1 のインストール
+1. VirtualBox 6.1 のインストール
 
 チュートリアルでは、VirtualBox 6.1 上で Lin4Neuro を動作させます。最新版の Lin4Neuro は、VirtualBox 6.1で最適化されているため、前のバージョンのVirtualBoxを使用の方は必ず6.1にアップグレードしてください。
 
@@ -44,13 +45,13 @@ FreeSurfer, FSL, git などのソフトウェアを自前でセットアップ�
 
 ![セットアップ後画像](img/vb01.png)
 
-## Lin4Neuro仮想アプライアンスのダウンロード
+2. Lin4Neuro仮想アプライアンスのダウンロード
 
 Lin4Neuroの仮想アプライアンスを以下からダウンロードします。20GBありますので、十分に容量があるところにダウンロードしてください。
 
 - [L4N-1804-abis-20191218.ovaのダウンロード](http://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/ova/L4N-1804-abis-20191218.ova)
 
-## Lin4Neuro仮想アプライアンスのインポート
+3. Lin4Neuro仮想アプライアンスのインポート
 
 ダウンロードした仮想アプライアンスを用いて仮想マシンをインポートします。
 
@@ -73,7 +74,7 @@ Lin4Neuroの仮想アプライアンスを以下からダウンロードしま�
 
 ![仮想アプライアンスのインポート4](img/vb05.png)
 
-## 共有フォルダのセットアップ
+4. 共有フォルダのセットアップ
 
 - 30GB以上あいているところに、Macの方はFinderから、Windowsの方はエクスプローラーから、 **share** というフォルダを作成します。すべて小文字で作成してください。
 
@@ -99,7 +100,7 @@ Lin4Neuroの仮想アプライアンスを以下からダウンロードしま�
 
 - これで、設定は終了です。
 
-## Lin4Neuroの起動
+5. Lin4Neuroの起動
 
 - VirtualBoxのメイン画面から、 **L4N-1804-abis** を選択したうえで、 **起動** をクリックします。
 
@@ -109,19 +110,19 @@ Lin4Neuroの仮想アプライアンスを以下からダウンロードしま�
 
 ![Lin4Neuroの起動2](img/vb10.png)
 
-## 共有フォルダの確認
+6. 共有フォルダの確認
 
 - 画面左上にある **sf_share** は共有フォルダとして設定したものです。
 
 - sf_share をダブルクリックし、先程試しに入れたファイルが見えることを確認してください。
 
-## 画像解析ツールの確認
+7. 画像解析ツールの確認
 
 - ログインした後、左下の脳のアイコンをクリックし、 **脳画像解析** をクリックすると、インストールされているソフトウェアを確認できます。
 
 ![画像解析ツール](img/vb11.png)
 
-## FreeSurferの確認
+8. FreeSurferの確認
 
 FreeSurferのツールはアイコンが準備されていません。以下で確認します。
 
@@ -138,6 +139,12 @@ FreeSurferのツールはアイコンが準備されていません。以下で�
 ![FreeSurferの起動](img/vb13.png)
 
 
-http://www.md.tsukuba.ac.jp/clinical-med/psy-neuroimaging/ova/L4N-1804-abis-20191218.ova
+## 自前のmacOS環境で参加する場合
+
+1. ソフトウェアのインストール
+
+    - ご自身でMacを操作する方は、FreeSurferを各自セットアップしてきてください。
+        - FreeSurfer: [macOSへのFreeSurfer6.0のインストール](http://www.nemotos.net/?p=1948)
+
 
 
