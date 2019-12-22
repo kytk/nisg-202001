@@ -37,7 +37,7 @@ FreeSurfer, FSL, git などのソフトウェアを自前でセットアップ�
 
 チュートリアルでは、VirtualBox 6.1 上で Lin4Neuro を動作させます。最新版の Lin4Neuro は、VirtualBox 6.1で最適化されているため、前のバージョンのVirtualBoxを使用の方は必ず6.1にアップグレードしてください。
 
-- [VirtualBoxのサイト](https://www.virtualbox.org/wiki/Downloads) から、ご自身のOSにあったVirtualBoxのインストーラーをダウンロードします。
+- [VirtualBoxのサイト](https://www.virtualbox.org/wiki/Downloads){:target="_blank"} から、ご自身のOSにあったVirtualBoxのインストーラーをダウンロードします。
 
 - ダウンロードしたインストーラーを用いてVirtualBox 6.1 をインストールします。
 
@@ -144,7 +144,7 @@ FreeSurferのツールはアイコンが準備されていません。以下で�
 1. ソフトウェアのインストール
 
     - ご自身でMacを操作する方は、FreeSurferを各自セットアップしてきてください。
-        - FreeSurfer: [macOSへのFreeSurfer6.0のインストール](http://www.nemotos.net/?p=1948)
+        - FreeSurfer: [macOSへのFreeSurfer6.0のインストール](http://www.nemotos.net/?p=1948){:target="_blank"} 
 
 
 

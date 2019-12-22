@@ -7,7 +7,7 @@
 - 2019.12.22: 勉強会用ウェブサイトを立ち上げました。
 
 ## 会場案内
-- [オフィス東京](https://www.officetokyo.net/)
+- [オフィス東京](https://www.officetokyo.net/){:target="_blank"}
 
 ## チュートリアル当日のお願い
 - 会場は、飲食可能です。しかし、コンピュータを使いますので、コーヒーをキーボードの上にこぼすといった悲劇が起こらないよう、ふたのついた飲み物の持ち込みにご協力ください。昼食は、会場内で召し上がっていただいてかまいません。
@@ -23,7 +23,7 @@
 
 ## ソフトウェアの準備
 
-- [こちら](./setup_l4n.md)をご覧ください。
+- [こちら](./setup_l4n.md){:target="_blank"} をご覧ください。
 
 ## データおよびテキスト配布
 
@@ -34,6 +34,6 @@
 
 準備がうまくいかない時のために、問い合わせフォームを準備しています。こちらからご質問ください。数日以内に担当者から返信させていただきます。
 
-[問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSdtCyn02LV6jI-YMr_TWyRuc84o2lirICncR0fXkcbOalesJw/viewform?usp=sf_link)
+[問い合わせフォーム](https://docs.google.com/forms/d/e/1FAIpQLSdtCyn02LV6jI-YMr_TWyRuc84o2lirICncR0fXkcbOalesJw/viewform?usp=sf_link){:target="_blank"}
 
 
