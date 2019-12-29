@@ -34,37 +34,37 @@
 - `cd git`をタイプします。Lin4Neuroは確実にありますが、MacOSの方でエラーになる場合は、`mkdir git`として git ディレクトリを作成し、再度 `cd git` としてください。
 - 以下をタイプ(もしくはコピー＆ペースト)します。
 
-```
-git clone https://github.com/kytk/fs-scripts.git
-```
+	```
+	git clone https://github.com/kytk/fs-scripts.git
+	```
 
-- これで、ホームディレクトリの下の git ディレクトリに、 fs-scripts というディレクトリが作成されます。(これは1回だけで大丈夫です)
+- これで、ホームディレクトリの下の git ディレクトリに、 fs-scripts というディレクトリが作成されます。
 
-- 次に、このディレクトリをパスに通します。以下をタイプします。
+- 次に、このディレクトリをパスに通します。以下をタイプします。(1回だけで大丈夫です)
 
-```
-cd fs-scripts
-./addpath.sh
-```
+	```
+	cd fs-scripts
+	./addpath.sh
+	```
 
 そうすると次のような表示が出ます。
 
-```
-Which OS are you using? Select number.
-1) Linux
-2) MacOS
-3) quit
-#? 
-```
+	```
+	Which OS are you using? Select number.
+	1) Linux
+	2) MacOS
+	3) quit
+	#? 
+	```
 
 Lin4Neuroの方は 1 を、MacOSの方は 2 をタイプしてください。
 
 そうすると、
 
-```
-PATH for fs-scripts was added to ~/.bashrc (Macの場合は~/.bash_profile)
-Please close the terminal, re-open and run checkpath.sh.
-```
+	```
+	PATH for fs-scripts was added to ~/.bashrc (Macの場合は~/.bash_profile)
+	Please close the terminal, re-open and run checkpath.sh.
+	```
 
 と表示されます。
 
@@ -72,17 +72,27 @@ Please close the terminal, re-open and run checkpath.sh.
 
 そこで、以下をタイプしてください。
 
-```
-checkpath.sh
-```
+	```
+	checkpath.sh
+	```
 
 これで、
 
-```
-Success! fs-scripts is added to path.
-```
+	```
+	Success! fs-scripts is added to path.
+	```
 
 となれば、スクリプトのディレクトリがパスに追加されました。
+
+## FreeSurfer用スクリプトのアップデート
+
+案内があった場合には、以下をタイプしてください。
+
+	```
+	cd ~/git/fs-scripts
+	git pull
+	```
+
 
 ## データおよびテキスト配布
 
