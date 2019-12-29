@@ -47,7 +47,7 @@
 	./addpath.sh
 	```
 
-そうすると次のような表示が出ます。
+- そうすると次のような表示が出ます。
 
 	```
 	Which OS are you using? Select number.
@@ -57,36 +57,29 @@
 	#? 
 	```
 
-Lin4Neuroの方は 1 を、MacOSの方は 2 をタイプしてください。
-
-そうすると、
+- Lin4Neuroの方は 1 を、MacOSの方は 2 をタイプしてください。そうすると、以下が表示されます。
 
 	```
 	PATH for fs-scripts was added to ~/.bashrc (Macの場合は~/.bash_profile)
 	Please close the terminal, re-open and run checkpath.sh.
 	```
 
-と表示されます。
-
-ターミナルを一度閉じてください。そして、新たにターミナルを起動します。
-
-そこで、以下をタイプしてください。
+- ターミナルを一度閉じてください。そして、新たにターミナルを起動し、以下をタイプしてください。
 
 	```
 	checkpath.sh
 	```
 
-これで、
+- これで、以下が表示されれば無事にパスに追加されました。
 
 	```
 	Success! fs-scripts is added to path.
 	```
 
-となれば、スクリプトのディレクトリがパスに追加されました。
 
 ## FreeSurfer用スクリプトのアップデート
 
-案内があった場合には、以下をタイプしてください。
+- 案内があった場合には、以下をタイプしてください。
 
 	```
 	cd ~/git/fs-scripts
