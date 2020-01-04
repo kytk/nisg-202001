@@ -1,0 +1,1 @@
+mris_sphere -rusage /home/brain/freesurfer/subjects/ernie/touch/rusage.mris_sphere.lh.dat -seed 1234 ../surf/lh.inflated ../surf/lh.sphere

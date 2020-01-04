@@ -1,0 +1,508 @@
+status file for recon-all
+Mon Dec 30 20:03:29 JST 2019
+#@# MotionCor Mon Dec 30 20:03:36 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:06:17 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:06:17 JST 2019
+#@# Talairach Mon Dec 30 20:06:17 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:07:56 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:07:57 JST 2019
+#@# Nu Intensity Correction Mon Dec 30 20:07:57 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:09:59 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:10:00 JST 2019
+#@# Intensity Normalization Mon Dec 30 20:10:00 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:12:13 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:12:14 JST 2019
+#@# Skull Stripping Mon Dec 30 20:12:14 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:32:09 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:32:10 JST 2019
+#@# EM Registration Mon Dec 30 20:32:10 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:50:38 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:50:38 JST 2019
+#@# CA Normalize Mon Dec 30 20:50:38 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 20:51:46 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 20:51:47 JST 2019
+#@# CA Reg Mon Dec 30 20:51:47 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 22:43:07 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 22:43:07 JST 2019
+#@# SubCort Seg Mon Dec 30 22:43:07 JST 2019
+#@# Merge ASeg Mon Dec 30 23:25:50 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:25:50 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:25:50 JST 2019
+#@# Intensity Normalization2 Mon Dec 30 23:25:50 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:28:27 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:28:27 JST 2019
+#@# Mask BFS Mon Dec 30 23:28:27 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:28:29 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:28:29 JST 2019
+#@# WM Segmentation Mon Dec 30 23:28:29 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:30:03 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:30:04 JST 2019
+#@# Fill Mon Dec 30 23:30:04 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:30:33 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:30:33 JST 2019
+#@# Tessellate lh Mon Dec 30 23:30:33 JST 2019
+#@# Tessellate rh Mon Dec 30 23:30:39 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:30:43 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:30:44 JST 2019
+#@# Smooth1 lh Mon Dec 30 23:30:44 JST 2019
+#@# Smooth1 rh Mon Dec 30 23:30:48 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:30:52 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:30:53 JST 2019
+#@# Inflation1 lh Mon Dec 30 23:30:53 JST 2019
+#@# Inflation1 rh Mon Dec 30 23:31:25 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:31:58 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:31:59 JST 2019
+#@# QSphere lh Mon Dec 30 23:31:59 JST 2019
+#@# QSphere rh Mon Dec 30 23:35:55 JST 2019
+recon-all -s ernie finished without error at Mon Dec 30 23:39:30 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Mon Dec 30 23:39:30 JST 2019
+#@# Fix Topology Copy lh Mon Dec 30 23:39:30 JST 2019
+#@# Fix Topology Copy rh Mon Dec 30 23:39:30 JST 2019
+#@# Fix Topology lh Mon Dec 30 23:39:30 JST 2019
+#@# Fix Topology rh Mon Dec 30 23:51:32 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 00:09:12 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 00:09:13 JST 2019
+#@# Make White Surf lh Tue Dec 31 00:09:13 JST 2019
+#@# Make White Surf rh Tue Dec 31 00:20:46 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 00:32:07 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 00:32:08 JST 2019
+#@# Smooth2 lh Tue Dec 31 00:32:08 JST 2019
+#@# Smooth2 rh Tue Dec 31 00:32:12 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 00:32:18 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 00:32:19 JST 2019
+#@# Inflation2 lh Tue Dec 31 00:32:19 JST 2019
+#@# Inflation2 rh Tue Dec 31 00:32:54 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 00:33:28 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 00:33:29 JST 2019
+#@# Curv .H and .K lh Tue Dec 31 00:33:29 JST 2019
+#@# Curv .H and .K rh Tue Dec 31 00:34:39 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 00:35:44 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 00:35:44 JST 2019
+#@# Curvature Stats lh Tue Dec 31 00:35:44 JST 2019
+#@# Curvature Stats rh Tue Dec 31 00:35:47 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 00:35:50 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 00:35:51 JST 2019
+#@# Sphere lh Tue Dec 31 00:35:51 JST 2019
+#@# Sphere rh Tue Dec 31 01:17:25 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 02:00:42 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 02:00:42 JST 2019
+#@# Surf Reg lh Tue Dec 31 02:00:42 JST 2019
+#@# Surf Reg rh Tue Dec 31 02:50:24 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 03:41:50 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 03:41:50 JST 2019
+#@# Jacobian white lh Tue Dec 31 03:41:50 JST 2019
+#@# Jacobian white rh Tue Dec 31 03:41:52 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 03:41:53 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 03:41:54 JST 2019
+#@# AvgCurv lh Tue Dec 31 03:41:54 JST 2019
+#@# AvgCurv rh Tue Dec 31 03:41:55 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 03:41:56 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 03:41:57 JST 2019
+#@# Cortical Parc lh Tue Dec 31 03:41:57 JST 2019
+#@# Cortical Parc rh Tue Dec 31 03:42:08 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 03:42:18 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 03:42:19 JST 2019
+#@# Make Pial Surf lh Tue Dec 31 03:42:19 JST 2019
+#@# Make Pial Surf rh Tue Dec 31 03:52:48 JST 2019
+#@# Surf Volume lh Tue Dec 31 04:03:27 JST 2019
+#@# Surf Volume rh Tue Dec 31 04:03:29 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:03:32 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:03:32 JST 2019
+#@# Cortical ribbon mask Tue Dec 31 04:03:32 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:15:37 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:15:38 JST 2019
+#@# Parcellation Stats lh Tue Dec 31 04:15:38 JST 2019
+#@# Parcellation Stats rh Tue Dec 31 04:16:36 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:17:33 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:17:33 JST 2019
+#@# Cortical Parc 2 lh Tue Dec 31 04:17:33 JST 2019
+#@# Cortical Parc 2 rh Tue Dec 31 04:17:47 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:18:01 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:18:01 JST 2019
+#@# Parcellation Stats 2 lh Tue Dec 31 04:18:01 JST 2019
+#@# Parcellation Stats 2 rh Tue Dec 31 04:18:32 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:19:02 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:19:03 JST 2019
+#@# Cortical Parc 3 lh Tue Dec 31 04:19:03 JST 2019
+#@# Cortical Parc 3 rh Tue Dec 31 04:19:14 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:19:25 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:19:25 JST 2019
+#@# Parcellation Stats 3 lh Tue Dec 31 04:19:25 JST 2019
+#@# Parcellation Stats 3 rh Tue Dec 31 04:19:54 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:20:22 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:20:23 JST 2019
+#@# WM/GM Contrast lh Tue Dec 31 04:20:23 JST 2019
+#@# WM/GM Contrast rh Tue Dec 31 04:20:27 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:20:32 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:20:32 JST 2019
+#@# Relabel Hypointensities Tue Dec 31 04:20:32 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:20:48 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:20:49 JST 2019
+#@# AParc-to-ASeg aparc Tue Dec 31 04:20:49 JST 2019
+#@# AParc-to-ASeg a2009s Tue Dec 31 04:24:45 JST 2019
+#@# AParc-to-ASeg DKTatlas Tue Dec 31 04:28:50 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:32:54 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:32:55 JST 2019
+#@# APas-to-ASeg Tue Dec 31 04:32:55 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:33:01 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:33:02 JST 2019
+#@# ASeg Stats Tue Dec 31 04:33:02 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:36:06 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:36:06 JST 2019
+#@# WMParc Tue Dec 31 04:36:06 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:45:40 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Tue Dec 31 04:45:41 JST 2019
+#@# BA_exvivo Labels lh Tue Dec 31 04:45:41 JST 2019
+#@# BA_exvivo Labels rh Tue Dec 31 04:49:30 JST 2019
+recon-all -s ernie finished without error at Tue Dec 31 04:53:18 JST 2019
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Sat Jan  4 13:10:33 JST 2020
+#@# Hippocampal Subfields processing (T1 only) left Sat Jan  4 13:10:33 JST 2020
+#@# Hippocampal Subfields processing (T1 only) right Sat Jan  4 13:31:42 JST 2020
+recon-all -s ernie finished without error at Sat Jan  4 13:53:52 JST 2020
+
+
+
+New invocation of recon-all 
+
+
+
+status file for recon-all
+Sat Jan  4 14:08:45 JST 2020
+#@# Segmentation of brainstem substructures  Sat Jan  4 14:08:45 JST 2020
+recon-all -s ernie finished without error at Sat Jan  4 14:29:14 JST 2020

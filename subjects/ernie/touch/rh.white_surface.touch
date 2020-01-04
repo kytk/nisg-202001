@@ -1,0 +1,1 @@
+mris_make_surfaces -aseg ../mri/aseg.presurf -white white.preaparc -noaparc -mgz -T1 brain.finalsurfs ernie rh

@@ -1,0 +1,9 @@
+Logfile for pctsurfcon
+Tue Dec 31 04:20:23 JST 2019
+setenv SUBJECTS_DIR /home/brain/freesurfer/subjects
+cd /home/brain/freesurfer/subjects/ernie/scripts
+/usr/local/freesurfer/bin/pctsurfcon
+$Id: pctsurfcon,v 1.15 2016/02/12 21:43:15 zkaufman Exp $
+Linux L4N 4.15.0-72-generic #81-Ubuntu SMP Tue Nov 26 12:20:02 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+FREESURFER_HOME /usr/local/freesurfer
+Cleaning up

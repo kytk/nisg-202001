@@ -1,0 +1,1 @@
+mri_cc -aseg aseg.auto_noCCseg.mgz -o aseg.auto.mgz -lta /home/brain/freesurfer/subjects/ernie/mri/transforms/cc_up.lta ernie

@@ -1,0 +1,1 @@
+mri_convert /home/brain/freesurfer/subjects/ernie/mri/rawavg.mgz /home/brain/freesurfer/subjects/ernie/mri/orig.mgz --conform
