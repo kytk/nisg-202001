@@ -1,0 +1,11 @@
+*.nii filter=lfs diff=lfs merge=lfs -text
+*.nii.gz filter=lfs diff=lfs merge=lfs -text
+*.mgz filter=lfs diff=lfs merge=lfs -text
+*.inflated filter=lfs diff=lfs merge=lfs -text
+*.smoothwm filter=lfs diff=lfs merge=lfs -text
+*.white filter=lfs diff=lfs merge=lfs -text
+*.pial filter=lfs diff=lfs merge=lfs -text
+*.preaparc filter=lfs diff=lfs merge=lfs -text
+*.orig filter=lfs diff=lfs merge=lfs -text
+*.sphere.reg filter=lfs diff=lfs merge=lfs -text
+*.sphere filter=lfs diff=lfs merge=lfs -text

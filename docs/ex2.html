@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="freesurfer勉強会">FreeSurfer勉強会</h1>
+<h2 id="第1部2-recon-all--autorecon2">第1部(2) recon-all -autorecon2</h2>
+<h3 id="subjects_dirの設定">SUBJECTS_DIRの設定</h3>
+<ul>
+<li><p>Lin4Neuro</p>
+<pre><code>===================================
+nisg=/media/sf_share/nisg-202001
+===================================</code></pre></li>
+<li><p>MacOS</p>
+<pre><code>===================================
+nisg=~/git/nisg-202001
+===================================</code></pre></li>
+</ul>
+<pre><code>========================================
+SUBJECTS_DIR=$nisg/subjects
+cd $SUBJECTS_DIR/ernie
+========================================</code></pre>
+<ul>
+<li>$SUBJECTS_DIR は、自分で変更できます。これを使うことで、任意の場所にFreeSurferの結果を保存できます。</li>
+</ul>
+<h3 id="talairach.lta-の確認">talairach.lta の確認</h3>
+<pre><code>========================================
+cd mri
+cat transforms/talairach.lta
+========================================</code></pre>
+<h3 id="皮質下領域の確認">皮質下領域の確認</h3>
+<pre><code>========================================
+freeview -v T1.mgz \
+ aseg.presurf.mgz:colormap=lut
+========================================</code></pre>
+<ul>
+<li>:colormap でカラーマップを指定できます。</li>
+<li>lut は、FreeSurfer専用のカラーマップです。</li>
+</ul>
+<h3 id="信号値補正の確認">信号値補正の確認</h3>
+<pre><code>========================================
+freeview -v brainmask.mgz brain.mgz
+========================================</code></pre>
+<h3 id="wm.mgzの確認">wm.mgzの確認</h3>
+<pre><code>========================================
+freeview -v brain.mgz \
+ wm.mgz:opacity=0.8:colormap=heat
+========================================</code></pre>
+<ul>
+<li>:opacity は不透明度を設定します。0-1の間の値をとります。</li>
+<li>:colormap=heat で、heatカラーマップを指定します。</li>
+</ul>
+<h3 id="filled.mgzの確認">filled.mgzの確認</h3>
+<pre><code>========================================
+freeview -v wm.mgz filled.mgz
+========================================</code></pre>
+<h3 id="white-surface-画像の確認">white surface 画像の確認</h3>
+<pre><code>========================================
+cd .. # $SUBJECTS_DIR/ernie に移動
+freeview -f surf/lh.orig.nofix \
+ -layout 3 -viewport 3d
+========================================</code></pre>
+<h3 id="平滑化された-white-surface-画像の確認">平滑化された white surface 画像の確認</h3>
+<pre><code>========================================
+freeview -f surf/lh.smoothwm.nofix \
+ -layout 3 -viewport 3d
+========================================</code></pre>
+<h3 id="どれだけ-inflate-されるか確認">どれだけ inflate されるか確認</h3>
+<pre><code>========================================
+freeview -f surf/lh.smoothwm.nofix \
+ surf/lh.inflated.nofix \
+ -layout 1 -viewport 3d
+========================================</code></pre>
+<h3 id="頂点数などの確認">頂点数などの確認</h3>
+<pre><code>========================================
+mris_euler_number surf/lh.orig.nofix
+mris_euler_number surf/lh.orig
+========================================</code></pre>
+<ul>
+<li>mris_euler_number は、FreeSurferに準備されているコマンドで、脳表に敷き詰めた三角形の頂点の数、辺の数、三角形の数などを確認することができます。</li>
+</ul>
+<h3 id="平滑化の効果確認">平滑化の効果確認</h3>
+<pre><code>========================================
+freeview -v mri/brain.mgz -f \
+ surf/lh.orig.nofix:edgecolor=yellow \
+ surf/lh.smoothwm:edgecolor=blue \
+ -layout 1 -viewport axial -zoom 3
+========================================</code></pre>
+<ul>
+<li>-v でVolume画像を、-f でSurface画像を表示します。</li>
+<li>:edgecolor で、Surface画像の境界線の色を指定できます。</li>
+<li>-zoom 3 で、3倍に拡大して表示します。</li>
+</ul>
+<h3 id="lh.inflated-と-lh.sulc-の確認">lh.inflated と lh.sulc の確認</h3>
+<pre><code>========================================
+freeview -f surf/lh.inflated \
+ surf/lh.inflated:overlay=lh.sulc \
+ -layout 1 -viewport 3d
+========================================</code></pre>
+<ul>
+<li>lh.sulc は正確には画像ファイルではなく、信号値の情報をもっているだけのファイルです。このため、これを直接表示しようとするとエラーになり、inflated画像に overlay する形で表示します。</li>
+</ul>
+<h3 id="lh.white.h-の確認">lh.white.H の確認</h3>
+<pre><code>========================================
+freeview -v mri/brain.mgz \
+ -f surf/lh.smoothwm:overlay=lh.white.H \
+ -layout 2 -viewport sagittal
+========================================</code></pre>
+<h3 id="lh.curv.stats-の確認">lh.curv.stats の確認</h3>
+<pre><code>========================================
+less stats/lh.curv.stats
+========================================</code></pre>
+<ul>
+<li>less は、ファイルを表示するコマンドです。終了を表示するには、&quot;q&quot; をタイプします。</li>
+</ul>
+</body>
+</html>

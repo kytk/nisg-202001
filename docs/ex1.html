@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="freesurfer勉強会">FreeSurfer勉強会</h1>
+<h2 id="第1部1-recon-all--autorecon1">第1部(1) recon-all -autorecon1</h2>
+<h3 id="サンプルデータの表示">サンプルデータの表示</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR
+freeview -v sample-001.mgz \
+ sample-002.mgz -layout 2 \
+ -viewport sagittal 
+========================================</code></pre>
+<ul>
+<li><p>cd: シェルのコマンドで、&quot;change directory&quot; の略です。</p></li>
+<li><p>$SUBJECTS_DIR: FreeSurferが画像を保存するディレクトリを示す変数です。この中にsample-001.mgz が入っているので、ここにまず移動します。</p></li>
+<li><p>freeview: FreeSurferの画像ビューワーを立ち上げるコマンドです</p></li>
+<li><p>-v: volumeデータを表示するときに使います</p></li>
+<li><p>\ は、1行のコマンドを改行して入力したい時に使う記号です。</p></li>
+<li><p>-layout 2: Freeviewのレイアウトを決めます。レイアウト2というのは、2x2の表示です。レイアウト1は、ひとつの画面のみ、レイアウト3はひとつの大きな画面の下に3つの小さな画面、レイアウト4はひとつの大きな画面の右に3つの小さな画面です。これは、Freeviewのメニューにある順番となっています。</p></li>
+</ul>
+<div class="figure">
+<img src="img/ex1_01.png" alt="レイアウト画面" />
+<p class="caption">レイアウト画面</p>
+</div>
+<ul>
+<li>-viewport sagittal: 左上の画面に何を表示するかを決めます。今は矢状断が表示されます。オプションとして、sagittal, coronal, axial, 3d があります。</li>
+</ul>
+<h3 id="sample-001.mgz-のヘッダーを表示">sample-001.mgz のヘッダーを表示</h3>
+<pre><code>========================================
+mri_info sample-001.mgz
+========================================</code></pre>
+<ul>
+<li>mri_info: FreeSurferに入っている、画像のヘッダー情報を表示するコマンドです</li>
+</ul>
+<h3 id="勉強会のディレクトリの変数設定">勉強会のディレクトリの変数設定</h3>
+<ul>
+<li><p>Lin4Neuro</p>
+<pre><code>===================================
+nisg=/media/sf_share/nisg-202001
+===================================</code></pre></li>
+<li><p>MacOS</p>
+<pre><code>===================================
+nisg=~/git/nisg-202001
+===================================</code></pre></li>
+</ul>
+<h3 id="subjects_dirの設定">SUBJECTS_DIRの設定</h3>
+<pre><code>========================================
+SUBJECTS_DIR=$nisg/subjects
+cd $SUBJECTS_DIR/ernie
+========================================</code></pre>
+<ul>
+<li>$SUBJECTS_DIR は、自分で変更できます。これを使うことで、任意の場所にFreeSurferの結果を保存できます。</li>
+</ul>
+<h3 id="rawavgorig.mgz-のヘッダーを確認">{rawavg,orig}.mgz のヘッダーを確認</h3>
+<pre><code>========================================
+cd mri
+mri_info rawavg.mgz
+mri_info orig.mgz
+========================================</code></pre>
+<ul>
+<li>タイトルの{rawavg,orig}.mgz とは、rawavg.mgz と orig.mgz をまとめて表示する方法です。こんな方法もあるんだなと知っていただければ。</li>
+</ul>
+<h3 id="talairach.xfm-の確認">talairach.xfm の確認</h3>
+<pre><code>========================================
+cd transforms
+cat talairach.xfm
+========================================</code></pre>
+<ul>
+<li>cat シェルのコマンドで、テキストを表示します。2つ以上のファイルがある場合、テキストを連結して表示します。</li>
+</ul>
+<h3 id="freeviewで標準化の結果確認">Freeviewで標準化の結果確認</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR
+freeview -v fsaverage/mri/mni305.cor.mgz \
+ ernie/mri/orig_nu.mgz:reg=ernie/mri/transforms/talairach.xfm
+========================================</code></pre>
+<ul>
+<li>:reg は、変換パラメーターを適用したい時に使用します。</li>
+</ul>
+<h3 id="信号値の確認">信号値の確認</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR/ernie/mri
+freeview -v orig.mgz nu.mgz T1.mgz
+========================================</code></pre>
+<h3 id="頭蓋骨除去の確認">頭蓋骨除去の確認</h3>
+<pre><code>========================================
+freeview -v T1.mgz brainmask.mgz
+========================================</code></pre>
+</body>
+</html>

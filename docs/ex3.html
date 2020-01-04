@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="freesurfer勉強会">FreeSurfer勉強会</h1>
+<h2 id="第1部3-recon-all--autorecon3">第1部(3) recon-all -autorecon3</h2>
+<h3 id="subjects_dirの設定">SUBJECTS_DIRの設定</h3>
+<ul>
+<li><p>Lin4Neuro</p>
+<pre><code>===================================
+nisg=/media/sf_share/nisg-202001
+===================================</code></pre></li>
+<li><p>MacOS</p>
+<pre><code>===================================
+nisg=~/git/nisg-202001
+===================================</code></pre></li>
+</ul>
+<pre><code>========================================
+SUBJECTS_DIR=$nisg/subjects
+cd $SUBJECTS_DIR/ernie
+========================================</code></pre>
+<ul>
+<li>$SUBJECTS_DIR は、自分で変更できます。これを使うことで、任意の場所にFreeSurferの結果を保存できます。</li>
+</ul>
+<h3 id="lh.sphereの確認">lh.sphereの確認</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR/ernie/surf
+freeview -f lh.sphere \
+-layout 1 -viewport 3d
+========================================</code></pre>
+<h3 id="lh.sphere.regの確認">lh.sphere.regの確認</h3>
+<pre><code>========================================
+freeview -f \
+lh.sphere.reg:vertex=1 \
+-layout 1 -viewport 3d -zoom 10
+========================================</code></pre>
+<ul>
+<li>-zoom 10で10倍に拡大します。</li>
+</ul>
+<h3 id="頂点数が変わっていないことの確認">頂点数が変わっていないことの確認</h3>
+<pre><code>========================================
+mris_euler_number lh.smoothwm
+mris_euler_number lh.inflated
+mris_euler_number lh.sphere
+mris_euler_number lh.sphere.reg 
+========================================</code></pre>
+<h3 id="jacobian-determinantの確認">Jacobian determinantの確認</h3>
+<pre><code>========================================
+cd .. # $SUBJECTS_DIR/ernie に移動
+freeview -v mri/brain.mgz -f \
+surf/lh.smoothwm:overlay=lh.jacobian_white \
+-layout 2 -viewport coronal
+========================================</code></pre>
+<h3 id="平均的な-folding-pattern-を個人の-white-surface-に表示">平均的な folding pattern を個人の white surface に表示</h3>
+<pre><code>========================================
+cd surf 
+freeview -f lh.smoothwm:overlay=lh.avg_curv \
+-layout 1 -viewport 3d
+========================================</code></pre>
+<h3 id="dk-アトラスの確認">DK アトラスの確認</h3>
+<pre><code>========================================
+freeview -f lh.smoothwm:annot=aparc.annot
+freeview -f lh.inflated:annot=aparc.annot
+freeview -f lh.sphere:annot=aparc.annot
+========================================</code></pre>
+<h3 id="pial-surface-の確認">pial surface の確認</h3>
+<pre><code>========================================
+cd surf
+freeview -f lh.pial
+freeview -f \
+ lh.pial:overlay=lh.thickness
+========================================</code></pre>
+<ul>
+<li>皮質厚などの情報は、overlayで表示します。</li>
+</ul>
+<h3 id="thickness-の確認">thickness の確認</h3>
+<pre><code>========================================
+freeview -f \
+ lh.pial:overlay=lh.thickness:overlay_threshold=0.5,4.5
+========================================</code></pre>
+<h3 id="cortical-ribbon-の確認">cortical ribbon の確認</h3>
+<pre><code>========================================
+cd ../mri
+freeview -v lh.ribbon.mgz \
+ rh.ribbon.mgz \
+ ribbon.mgz:colormap=lut \
+ -layout 2 -viewport sagittal
+========================================</code></pre>
+<h3 id="destrieux-アトラスの確認">Destrieux アトラスの確認</h3>
+<pre><code>========================================
+cd ../surf
+freeview -f \
+ lh.pial:annot=aparc.a2009s.annot \
+ -layout 1 -viewport 3d
+========================================</code></pre>
+<ul>
+<li>:annot でアトラスを表示します。:annotに限っては、lh, rhをつける必要はありません。その前のlh.pialから自動的にlhと判定します。</li>
+</ul>
+<h3 id="dkt-アトラスの確認">DKT アトラスの確認</h3>
+<pre><code>========================================
+freeview -f \
+ lh.pial:annot=aparc.DKTatlas.annot
+========================================</code></pre>
+<h3 id="皮質aseg.mgzの確認">皮質+aseg.mgzの確認</h3>
+<pre><code>========================================
+cd ../mri
+freeview -v \
+ aparc.DKTatlas+aseg.mgz:colormap=lut \
+ aparc.a2009s+aseg.mgz:colormap=lut \
+ aparc+aseg.mgz:colormap=lut \
+ -layout 2 -viewport sagittal
+========================================</code></pre>
+<h3 id="aseg.mgz-の確認">aseg.mgz の確認</h3>
+<pre><code>========================================
+freeview -v aseg.mgz:colormap=lut
+========================================</code></pre>
+<h3 id="wmparc.mgz-の確認">wmparc.mgz の確認</h3>
+<pre><code>========================================
+freeview -v wmparc.mgz:colormap=lut
+========================================</code></pre>
+<h3 id="ラベルの表示法-1">ラベルの表示法 (1)</h3>
+<pre><code>========================================
+cd ..
+freeview -v mri/brain.mgz -l \
+ label/lh.BA1_exvivo.label 
+========================================</code></pre>
+<h3 id="ラベルの表示法-2">ラベルの表示法 (2)</h3>
+<pre><code>========================================
+freeview -f \
+ surf/lh.pial:curvature_method=off:label=label/lh.BA1_exvivo.label \
+ -layout 1 -viewport 3d
+========================================</code></pre>
+</body>
+</html>
