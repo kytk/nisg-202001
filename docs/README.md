@@ -39,17 +39,17 @@
 
 - 受講者の方々の中に、自分の使っているネットワークがプロキシサーバーの下にあるという方は、ターミナルから以下のコマンドをタイプしてください。
 
-```
-git config --global http.proxy http://プロキシ名:ポート番号
-git config --global https.proxy http://プロキシ名:ポート番号
-```
+	```
+	git config --global http.proxy http://プロキシ名:ポート番号
+	git config --global https.proxy http://プロキシ名:ポート番号
+	```
 
 - この設定を解除するときは、以下のコマンドをタイプします。
 
-```
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-```
+	```
+	git config --global --unset http.proxy
+	git config --global --unset https.proxy
+	```
 
 
 ## Git LFSの準備
