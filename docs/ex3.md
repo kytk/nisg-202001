@@ -105,7 +105,6 @@ freeview -f lh.sphere:annot=aparc.annot
 
 ```
 ========================================
-cd surf
 freeview -f lh.pial
 freeview -f \
  lh.pial:overlay=lh.thickness
