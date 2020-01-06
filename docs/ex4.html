@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="freesurfer勉強会">FreeSurfer勉強会</h1>
+<h2 id="第1部4-recon-allの実際-freeview">第1部(4) recon-allの実際 / freeview</h2>
+<h3 id="subjects_dirの設定">SUBJECTS_DIRの設定</h3>
+<ul>
+<li><p>Lin4Neuro</p>
+<pre><code>===================================
+nisg=/media/sf_share/nisg-202001
+===================================</code></pre></li>
+<li><p>MacOS</p>
+<pre><code>===================================
+nisg=~/git/nisg-202001
+===================================</code></pre></li>
+</ul>
+<pre><code>========================================
+SUBJECTS_DIR=$nisg/subjects
+========================================</code></pre>
+<ul>
+<li>$SUBJECTS_DIR は、自分で変更できます。これを使うことで、任意の場所にFreeSurferの結果を保存できます。</li>
+</ul>
+<h3 id="recon-all-関連スクリプト">recon-all 関連スクリプト</h3>
+<pre><code>========================================
+open ~/git/fs-scripts/fs_autorecon.sh
+========================================</code></pre>
+<ul>
+<li>open は macOS において、いろいろなファイルをあけることができるコマンドです。Linuxでは、<code>xdg-open</code> がそれに該当するのですが、<code>open</code> の方が mac でも Linux でも同じように扱うことができるので、Lin4Neuro では、xdg-open のエイリアスを open として設定しています。</li>
+</ul>
+<h3 id="recon-all-のログの確認">recon-all のログの確認</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR/ernie/scripts
+less recon-all-status.log
+========================================</code></pre>
+<ul>
+<li><code>less</code> コマンドは <code>q</code> で終了します。</li>
+</ul>
+<h3 id="matlabランタイムインストール">matlabランタイムインストール</h3>
+<ul>
+<li>勉強会の場では実行しないでください。時間がかかります。</li>
+</ul>
+<pre><code>========================================
+cd ~/git/fs-scripts
+./fs_download_matlabruntime.sh
+========================================</code></pre>
+<h3 id="freeview-の理解">freeview の理解</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR/ernie/mri
+freeview -v T1.mgz wm.mgz brainmask.mgz \
+ aseg.mgz:colormap=lut:opacity=0.2 \
+ -layout 2 -viewport sagittal
+========================================</code></pre>
+<h3 id="surface画像の表示">Surface画像の表示</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR/ernie/surf
+freeview -f \
+ lh.pial:annot=aparc.annot:name=lh.pial_aparc:visible=0 \
+ lh.inflated:overlay=lh.thickness:overlay_threshold=0.1,3:name=lh.inflated_thickness:visible=0 \
+ lh.inflated:visible=0 \
+ lh.white:edgecolor=blue:visible=0 \
+ lh.pial:edgecolor=red \
+ -viewport 3d
+========================================</code></pre>
+<h3 id="海馬のsubfield解析-高解像度">海馬のsubfield解析: 高解像度</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR/ernie/mri
+freeview -v nu.mgz \
+ lh.hippoSfLabels-T1.v10.mgz:colormap=lut \
+ rh.hippoSfLabels-T1.v10.mgz:colormap=lut \
+ -layout 1 -viewport coronal -zoom 5
+========================================</code></pre>
+<h3 id="海馬のsubfield解析-低解像度">海馬のsubfield解析: 低解像度</h3>
+<pre><code>========================================
+freeview -v brainmask.mgz \
+ lh.hippoSfLabels-T1.v10.FSvoxelSpace.mgz:colormap=lut \
+ rh.hippoSfLabels-T1.v10.FsvoxelSpace.mgz:colormap=lut \
+ -layout 1 -viewport coronal -zoom 5
+========================================</code></pre>
+<h3 id="脳幹の構造解析高解像度">脳幹の構造解析:高解像度</h3>
+<pre><code>========================================
+freeview -v nu.mgz \
+ brainstemSsLabels.v10.mgz:colormap=lut \
+ -layout 2 -viewport sagittal -zoom 3
+========================================</code></pre>
+<h3 id="脳幹の構造解析低解像度">脳幹の構造解析:低解像度</h3>
+<pre><code>========================================
+freeview -v brain.mgz \
+ brainstemSsLabels.v10.FSvoxelSpacei.mgz:colormap=lut \
+ -zoom 3
+========================================</code></pre>
+</body>
+</html>
