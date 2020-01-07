@@ -4,10 +4,49 @@
 
 ## 新着情報
 
+- 2020.01.07: 縦断データを入手するためのスクリプトを準備しました。「縦断データのダウンロード」に従って、データの入手をお願いします。ダウンロードするファイルサイズが10GBありますので、時間がかかります。
+
+- 2020.01.07: 第2部（１）までアップロードしました。以下でアップデートをお願いします。
+
+    - Lin4Neuro
+
+        ```
+        cd /media/sf_share/nisg-202001
+        ```
+        ```
+        git pull
+        ```
+        ```
+        git lfs pull
+        ``` 
+    - macOS
+    
+        ```
+        cd ~/git/nisg-202001
+        ```
+        ```
+        git pull
+        ```
+        ```
+        git lfs pull
+        ```
+        
+- 2020.01.07: fs-scriptsをアップデートしました。以下でアップデートしてください。
+    ```
+    cd ~/git/fs-scripts
+    ```
+    ```
+    git pull
+    ```
+    
 - 2020.01.05: プロキシの設定について追記しました。
+
 - 2020.01.04: テキストについて追記しました。
+
 - 2020.01.01: Git LFSについて追記しました。
+
 - 2019.12.29: セットアップについて追記しました。
+
 - 2019.12.22: 勉強会用ウェブサイトを立ち上げました。
 
 ## 会場案内
@@ -23,13 +62,14 @@
 
 ## チュートリアルのスケジュール
 
-- 09:00-09:50 recon-all -autorecon1
-- 10:00-11:20 recon-all -autorecon2
-- 11:30-12:30 recon-all -autorecon3
-- 12:30-13:30 昼休み
-- 13:30-14:30 recon-allの実際 / freeview
-- 14:40-15:40 ROI解析
-- その後は現在調整中
+- 09:00 - 09:50 recon-all -autorecon1
+- 10:00 - 11:20 recon-all -autorecon2
+- 11:30 - 12:30 recon-all -autorecon3
+- 12:30 - 13:20 昼休み
+- 13:20 - 14:20 recon-allの実際 / freeview
+- 14:30 - 15:20 ROI解析
+- 15:30 - 16:40 縦断解析
+- 16:40 - 17:00 質疑応答
 
 ## FreeSurferを含めたソフトウェアの準備
 
@@ -110,7 +150,6 @@
 	1) Linux
 	2) MacOS
 	3) quit
-	#? 
 	```
 
 - Lin4Neuroの方は 1 を、macOSの方は 2 をタイプしてください。そうすると、以下が表示されます。
@@ -167,13 +206,48 @@
 	```
 
 - git clone だけだと、大容量ファイルはcloneされません。
+
 - git lfs pull で、はじめて大容量ファイルがダウンロードされます。
+
+## 縦断データのダウンロード
+
+- ターミナルを起動し、勉強会のディレクトリに移動します。
+    - Lin4Neuro
+        ```
+        cd /media/sf_share/nisg-202001
+        ```
+
+    - macOS
+        ```
+        cd ~/git/nisg-202001
+        ```
+
+- 内容を最新にします。
+    ```
+    git pull
+    git lfs-pull
+    ```
+
+- さらに下の subjects ディレクトリに移動します。
+    ```
+    cd subjects
+    ```
+
+- ここにある getdata.sh を実行します。ファイルの前に、./ をつけることを忘れないでください。
+    ```
+    ./getdata.sh
+    ```
+
+- こうすると、OAS2.zip というファイルがダウンロードされ、その後自動で展開されます。
+
 
 ## チートシート
 
 - [recon-all -autorecon1](./ex1.md){:target="_blank"}
 - [recon-all -autorecon2](./ex2.md){:target="_blank"}
 - [recon-all -autorecon3](./ex3.md){:target="_blank"}
+- [recon-allの実際 / freeview](./ex4.md){:target="_blank"}
+- [ROI解析](./ex5.md){:target="_blank"}
 
 
 ## 問い合わせ
