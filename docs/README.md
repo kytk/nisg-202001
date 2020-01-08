@@ -4,7 +4,24 @@
 
 ## 新着情報
 
-- 2020.01.08: テキストが見れないなどする場合、以下を試してください。
+- 2020.01.08: テキストが見れないなどする場合、以下を試してください。`git lfs install` は一度だけ実行すればOKです。
+
+    - Lin4Neuro
+
+        ```
+        cd /media/sf_share/nisg-202001
+        git lfs install
+        git lfs pull
+        ``` 
+
+    - macOS
+    
+        ```
+        cd ~/git/nisg-202001
+        git lfs install
+        git lfs pull
+        ```
+
 
 - 2020.01.08: **お願い**: テキストをすべてアップロードしました。以下でアップデートをお願いします。
 
@@ -12,9 +29,6 @@
 
         ```
         cd /media/sf_share/nisg-202001
-        # git lfs installは一度だけで大丈夫です。
-        # 既に行っている人はしなくて大丈夫です
-        git lfs install
         git pull
         git lfs pull
         ``` 
@@ -23,9 +37,6 @@
     
         ```
         cd ~/git/nisg-202001
-        # git lfs installは一度だけで大丈夫です。
-        # 既に行っている人はしなくて大丈夫です
-        git lfs install
         git pull
         git lfs pull
         ```
