@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="freesurfer勉強会">FreeSurfer勉強会</h1>
+<h2 id="第2部2-縦断解析">第2部(2) 縦断解析</h2>
+<h3 id="subjects_dirの設定">SUBJECTS_DIRの設定</h3>
+<ul>
+<li><p>Lin4Neuro</p>
+<pre><code>===================================
+nisg=/media/sf_share/nisg-202001
+===================================</code></pre></li>
+<li><p>MacOS</p>
+<pre><code>===================================
+nisg=~/git/nisg-202001
+===================================</code></pre></li>
+</ul>
+<pre><code>========================================
+SUBJECTS_DIR=$nisg/subjects
+========================================</code></pre>
+<ul>
+<li>$SUBJECTS_DIR は、自分で変更できます。これを使うことで、任意の場所にFreeSurferの結果を保存できます。</li>
+</ul>
+<h3 id="勉強会に使ったデータの確認">勉強会に使ったデータの確認</h3>
+<pre><code>========================================
+cd $nisg/nifti
+ls
+========================================</code></pre>
+<h3 id="fs_qc_base.sh">fs_qc_base.sh</h3>
+<pre><code>========================================
+cd $SUBJECTS_DIR
+fs_qc_base.sh OAS2_0013
+========================================</code></pre>
+<h3 id="for文のワンライナー">for文のワンライナー</h3>
+<pre><code>========================================
+for n in 1 2 3; do echo &quot;MR_$n&quot;; done
+========================================</code></pre>
+<h3 id="fs_qc_long.shをfor文のワンライナーにいれこむ">fs_qc_long.shをfor文のワンライナーにいれこむ</h3>
+<pre><code>========================================
+for f in OAS2_????; do fs_qc_long.sh $f; done
+========================================</code></pre>
+<h3 id="oasisデータセットに付属しているexcelファイルの確認">OASISデータセットに付属しているExcelファイルの確認</h3>
+<pre><code>========================================
+cd qdec
+open oasis_longitudinal.xls
+========================================</code></pre>
+<h3 id="縦断解析のために作成したデータ">縦断解析のために作成したデータ</h3>
+<pre><code>========================================
+column -t long.qdec.table.dat
+========================================</code></pre>
+<ul>
+<li>column は、Linux/macOSにあるコマンドで、入力を複数列に整形します。-t で入力行の列数を自動で判定し、表を作成します。</li>
+</ul>
+<h3 id="fs_thick-spc.sh">fs_thick-spc.sh</h3>
+<pre><code>========================================
+fs_thick-spc.sh OAS2_0013
+fs_thick-spc.sh OAS2_0157
+========================================</code></pre>
+<h3 id="long_stats_slopes-の例">long_stats_slopes の例</h3>
+<pre><code>========================================
+long_stats_slopes \
+ --qdec=qdec/long.qdec.table.dat \
+ --stats=lh.aparc.stats \
+ --meas=thickness \
+ --sd=$SUBJECTS_DIR \
+ --do-rate \
+ --do-pc1 \
+ --do-spc
+========================================</code></pre>
+<h3 id="long_stats_slopes-で-spc-をまとめて出力する">long_stats_slopes で spc をまとめて出力する</h3>
+<pre><code>========================================
+long_stats_slopes \
+ --qdec=qdec/long.qdec.table.dat \
+ --stats=lh.aparc.stats \
+ --meas=thickness \
+ --sd=$SUBJECTS_DIR \
+ --do-spc \
+ --stack-spc=tables/lh.thick.spc.csv
+========================================</code></pre>
+</body>
+</html>
