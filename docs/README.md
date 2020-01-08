@@ -11,11 +11,6 @@
 - 2020.01.07: テキストを第2部(1)までアップロードしました。以下でアップデートをお願いします。
 
 - 2020.01.07: fs-scriptsをアップデートしました。以下でアップデートしてください。
-
-        ```
-        cd ~/git/fs-scripts
-        git pull
-        ```
     
 - 2020.01.05: プロキシの設定について追記しました。
 
@@ -60,17 +55,17 @@
 
     - （必要な人のみ）受講者の方々の中に、自分の使っているネットワークがプロキシサーバーの下にあるという方は、ターミナルから以下のコマンドをタイプしてください。
 
-	```
-	git config --global http.proxy http://プロキシ名:ポート番号
-	git config --global https.proxy http://プロキシ名:ポート番号
-	```
+		```
+		git config --global http.proxy http://プロキシ名:ポート番号
+		git config --global https.proxy http://プロキシ名:ポート番号
+		```
 
     - プロキシ設定を解除するときは、以下のコマンドをタイプします。
 
-	```
-	git config --global --unset http.proxy
-	git config --global --unset https.proxy
-	```
+		```
+		git config --global --unset http.proxy
+		git config --global --unset https.proxy
+		```
 
 ### Git LFSの準備
 
