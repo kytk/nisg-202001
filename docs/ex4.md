@@ -121,7 +121,7 @@ freeview -v nu.mgz \
 ========================================
 freeview -v brainmask.mgz \
  lh.hippoSfLabels-T1.v10.FSvoxelSpace.mgz:colormap=lut \
- rh.hippoSfLabels-T1.v10.FsvoxelSpace.mgz:colormap=lut \
+ rh.hippoSfLabels-T1.v10.FSvoxelSpace.mgz:colormap=lut \
  -layout 1 -viewport coronal -zoom 5
 ========================================
 ```
