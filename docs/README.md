@@ -192,6 +192,7 @@
 	```
 	git clone https://github.com/kytk/nisg-202001.git
 	cd nisg-202001
+	git lfs install
 	git lfs pull
 	```
 
@@ -215,7 +216,7 @@
 - 内容を最新にします。
     ```
     git pull
-    git lfs-pull
+    git lfs pull
     ```
 
 - さらに下の subjects ディレクトリに移動します。
@@ -238,6 +239,7 @@
 - [recon-all -autorecon3](./ex3.md){:target="_blank"}
 - [recon-allの実際 / freeview](./ex4.md){:target="_blank"}
 - [ROI解析](./ex5.md){:target="_blank"}
+- [縦断解析](./ex6.md){:target="_blank"}
 
 
 ## 問い合わせ
