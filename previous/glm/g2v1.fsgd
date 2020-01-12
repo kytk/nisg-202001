@@ -1,0 +1,16 @@
+GroupDescriptorFile 1
+Title Group x age
+MeasurementName thickness
+Class Nondemented
+Class Demented
+Variables age 
+Input OAS2_0013 Nondemented 81
+Input OAS2_0022 Nondemented 61 
+Input OAS2_0048 Demented 66 
+Input OAS2_0050 Demented 71 
+Input OAS2_0067 Nondemented 67 
+Input OAS2_0095 Nondemented 71 
+Input OAS2_0097 Nondemented 74 
+Input OAS2_0111 Demented 62 
+Input OAS2_0146 Demented 80 
+Input OAS2_0157 Demented 73 

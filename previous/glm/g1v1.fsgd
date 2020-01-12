@@ -1,0 +1,15 @@
+GroupDescriptorFile 1
+Title Thickness_Age
+MeasurementName thickness
+Class Main
+Variables age 
+Input OAS2_0013 Main 81 
+Input OAS2_0022 Main 61 
+Input OAS2_0048 Main 66 
+Input OAS2_0050 Main 71 
+Input OAS2_0067 Main 67 
+Input OAS2_0095 Main 71 
+Input OAS2_0097 Main 74 
+Input OAS2_0111 Main 62 
+Input OAS2_0146 Main 80 
+Input OAS2_0157 Main 73 

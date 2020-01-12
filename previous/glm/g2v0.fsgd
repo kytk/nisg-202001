@@ -1,0 +1,15 @@
+GroupDescriptorFile 1
+Title Group_analysis
+MeasurementName thickness
+Class Nondemented
+Class Demented
+Input OAS2_0013 Nondemented 
+Input OAS2_0022 Nondemented 
+Input OAS2_0048 Demented 
+Input OAS2_0050 Demented 
+Input OAS2_0067 Nondemented 
+Input OAS2_0095 Nondemented 
+Input OAS2_0097 Nondemented 
+Input OAS2_0111 Demented 
+Input OAS2_0146 Demented 
+Input OAS2_0157 Demented 
